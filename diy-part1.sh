@@ -17,7 +17,7 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# 使用 O2 级别的优化
+# 使用 O3 级别的优化
 sed -i 's/Os/O3/g' include/target.mk
 
 # 交换 LAN/WAN 口
