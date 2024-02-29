@@ -13,8 +13,6 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# 获取 immortalwrt 的 DAE 
-cp -rf immortalwrt_pkg/net/dae feeds/packages/net/dae
 
 # 默认开启 Irqbalance
 sed -i "s/enabled '0'/enabled '1'/g" feeds/packages/utils/irqbalance/files/irqbalance.config
