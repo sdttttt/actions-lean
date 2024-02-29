@@ -1,7 +1,7 @@
 
 # Actions-Lean
 
-Lean固件主线编译，自带dae, openclash, O3优化。
+Lean固件主线编译，自带openclash, O3优化。**可吃鹅**
 
 ## 吃鹅餐前准备
 
