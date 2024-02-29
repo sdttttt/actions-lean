@@ -1,8 +1,7 @@
 
 # Actions-Lean
 
-Lean固件主线编译，自带openclash, O3优化。
-尝试在Lean上安装DAE.
+Lean固件主线编译，自带dae, openclash, O3优化。
 
 ## Credits
 
