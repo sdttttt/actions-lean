@@ -5,6 +5,7 @@ Lean固件主线编译，自带openclash, O3优化。**可吃鹅**
 
 ## 对比原固件区别
 
+主要是为了吃鹅。
 常规的开启一些关于eBPF的内核选项。
 
 ```
@@ -20,7 +21,7 @@ CONFIG_KERNEL_DEBUG_INFO_BTF=y
 CONFIG_KERNEL_XDP_SOCKETS=y
 ```
 
-Lean还需要添加`xdp-sockets-diag`模块。
+添加`xdp-sockets-diag`模块。
 
 ```bash
 # 添加 xdp-sockets-diag 内核模块
