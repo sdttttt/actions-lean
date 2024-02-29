@@ -3,7 +3,7 @@
 
 Lean固件主线编译，自带openclash, O3优化。**可吃鹅**
 
-# 和Immortalwrt区别感受
+## 和Immortalwrt区别感受
 
 - 两者性能上我感觉没有区别
 - 编译速度Lean会更快，可能是我配置文件的原因，速度要快1倍左右.
