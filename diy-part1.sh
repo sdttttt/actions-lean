@@ -69,6 +69,8 @@ function clone_repo() {
 immortalwrt_pkg_repo="https://github.com/immortalwrt/packages.git"
 clone_repo $immortalwrt_pkg_repo master immortalwrt_pkg
 
+cp -rf immortalwrt_pkg/net/dae packages/dae
+
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
