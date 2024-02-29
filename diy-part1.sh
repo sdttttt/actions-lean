@@ -55,6 +55,20 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
+# 定义一个函数，用来克隆指定的仓库和分支
+function clone_repo() {
+  # 参数1是仓库地址，参数2是分支名，参数3是目标目录
+  repo_url=$1
+  branch_name=$2
+  target_dir=$3
+  # 克隆仓库到目标目录，并指定分支名和深度为1
+  git clone -b $branch_name --depth 1 $repo_url $target_dir
+}
+
+# 获取 immortalwrt 仓库
+immortalwrt_pkg_repo="https://github.com/immortalwrt/packages.git"
+clone_repo $immortalwrt_pkg_repo master immortalwrt_pkg
+
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
