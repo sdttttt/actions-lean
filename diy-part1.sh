@@ -25,6 +25,26 @@ sed -i 's,-mcpu=generic,-march=armv8-a,g' include/target.mk
 sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
+# 添加 xdp-sockets-diag 内核模块
+echo '
+
+define KernelPackage/xdp-sockets-diag
+  SUBMENU:=$(NETWORK_SUPPORT_MENU)
+  TITLE:=PF_XDP sockets monitoring interface support for ss utility
+  KCONFIG:= \
+	CONFIG_XDP_SOCKETS=y \
+	CONFIG_XDP_SOCKETS_DIAG
+  FILES:=$(LINUX_DIR)/net/xdp/xsk_diag.ko
+  AUTOLOAD:=$(call AutoLoad,31,xsk_diag)
+endef
+
+define KernelPackage/xdp-sockets-diag/description
+ Support for PF_XDP sockets monitoring interface used by the ss tool
+endef
+
+$(eval $(call KernelPackage,xdp-sockets-diag))
+' >> package/kernel/linux/modules/netsupport.mk
+
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
