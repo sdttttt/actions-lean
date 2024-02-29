@@ -5,7 +5,21 @@ Lean固件主线编译，自带dae, openclash, O3优化。
 
 ## 吃鹅餐前准备
 
-除了常规的开启一些关于eBPF的内核选项之外。
+常规的开启一些关于eBPF的内核选项。
+
+```
+# eBPF
+CONFIG_DEVEL=y
+CONFIG_BPF_TOOLCHAIN_HOST=y
+# CONFIG_BPF_TOOLCHAIN_NONE is not set
+CONFIG_KERNEL_BPF_EVENTS=y
+CONFIG_KERNEL_CGROUP_BPF=y
+CONFIG_KERNEL_DEBUG_INFO=y
+CONFIG_KERNEL_DEBUG_INFO_BTF=y
+# CONFIG_KERNEL_DEBUG_INFO_REDUCED is not set
+CONFIG_KERNEL_XDP_SOCKETS=y
+```
+
 Lean还需要添加`xdp-sockets-diag`模块。
 
 ```bash
