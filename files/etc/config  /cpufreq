@@ -1,0 +1,4 @@
+config settings 'cpufreq'
+	option minfreq0 '600000'
+	option maxfreq0 '1608000'
+	option governor0 'performance'
