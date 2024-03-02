@@ -30,6 +30,9 @@ date_version=$(date +"%Y.%m.%d")
 orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
 sed -i "s/${orig_version}/${orig_version} build at ${date_version}/g" package/lean/default-settings/files/zzz-default-settings
 
+# 修改本地时间格式
+sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
+
 # 添加 xdp-sockets-diag 内核模块
 echo '
 
