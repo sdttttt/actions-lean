@@ -25,6 +25,11 @@ sed -i 's,-mcpu=generic,-march=armv8-a,g' include/target.mk
 sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
+# 为版本号追加编译日期
+date_version=$(date +"%Y.%m.%d")
+orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+sed -i "s/${orig_version}/${orig_version} build at ${date_version}/g" package/lean/default-settings/files/zzz-default-settings
+
 # 添加 xdp-sockets-diag 内核模块
 echo '
 
