@@ -53,6 +53,7 @@ jobs:
         skip: true
         #清空缓存
         clean: false
+        prefix: ${{ github.workspace }}/openwrt
         mixkey: 'x86_64'
 
     - name: Free Space
