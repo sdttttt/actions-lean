@@ -30,7 +30,7 @@ sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/
 # 为版本号追加编译日期
 date_version=$(date +"%Y.%m.%d")
 orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/${orig_version} build at ${date_version}/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/${orig_version}/${orig_version} [${date_version}]/g" package/lean/default-settings/files/zzz-default-settings
 
 # 修改本地时间格式
 sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
