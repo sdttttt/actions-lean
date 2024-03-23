@@ -1,7 +1,7 @@
 
 # Actions-Lean
 
-Lean固件主线编译，自带openclash, O3优化。**可吃鹅**
+Lean固件主线编译，5.4内核，自带openclash, O3优化。**可吃鹅**
 
 ## 和Immortalwrt区别感受
 
