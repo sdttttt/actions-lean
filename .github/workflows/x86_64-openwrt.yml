@@ -112,7 +112,7 @@ jobs:
         #是否跳过工具链编译
         skip: true
         #清空缓存
-        clean: false
+        clean: true
         prefix: ${{ github.workspace }}/openwrt
         mixkey: 'x86_64'
 
