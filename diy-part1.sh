@@ -21,9 +21,9 @@
 # 使用 O2 级别的优化
 sed -i 's/Os/O2/g' include/target.mk
 
-sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefile
 # sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
-sed -i 's/KERNEL_TESTING_PATCHVER:=6.6/KERNEL_TESTING_PATCHVER:=6.1/g' target/linux/x86/Makefile
+# sed -i 's/KERNEL_TESTING_PATCHVER:=6.6/KERNEL_TESTING_PATCHVER:=6.1/g' target/linux/x86/Makefile
 
 # 交换 LAN/WAN 口
 sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
