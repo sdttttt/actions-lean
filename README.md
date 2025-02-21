@@ -5,7 +5,7 @@ Lean固件主线编译，6.12内核，自带openclash, O3优化。**可吃鹅**
 
 ## 和Immortalwrt区别感受
 
-- 两者性能上我感觉没有区别
+- 性能上Lean好像确实更快一点，speedtest测速的时候发现Lean比immortalwrt更快拉满.
 - 编译速度Lean会更快，可能是我配置文件的原因，速度要快1倍左右.
 - Lean没有打版本号，感觉不太稳定，使用主线固件基本就是随缘.
 - Lean的软件仓库比Immortalwrt少很多.
