@@ -17,11 +17,10 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# sed -i 's/Os/O3/g' include/target.mk
 # 使用 O2 级别的优化
 sed -i 's/Os/O3/g' include/target.mk
 
-sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
 # sed -i 's/KERNEL_TESTING_PATCHVER:=6.6/KERNEL_TESTING_PATCHVER:=6.1/g' target/linux/x86/Makefile
 
 # 交换 LAN/WAN 口
