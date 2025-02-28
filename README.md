@@ -1,7 +1,7 @@
 
 # Actions-Lean
 
-Lean固件主线编译，6.12内核，自带openclash, O3优化。**可吃鹅**
+LEAN'S LEDE固件主线编译，6.6内核，自带OpenClash, O3优化。**可吃鹅**
 
 ☢目前该固件开启了PREEMPT（抢占式内核），尽可能降低延迟。
 
@@ -13,8 +13,6 @@ Lean固件主线编译，6.12内核，自带openclash, O3优化。**可吃鹅**
 - 编译速度Lean会更快，可能是我配置文件的原因，速度要快1倍左右.
 - Lean没有打版本号，感觉不太稳定，使用主线固件基本就是随缘.
 - Lean的软件仓库比Immortalwrt少很多.
-
-最后Lean的稳定性还有待考察, Immortalwrt是挺稳定的。
 
 ## 一些修改
 
