@@ -3,6 +3,8 @@
 
 Lean固件主线编译，6.12内核，自带openclash, O3优化。**可吃鹅**
 
+最近不吃鹅了，换了更强劲的设备，没有性能焦虑了又用回小猫咪了。
+
 ## 和Immortalwrt区别感受
 
 - 性能上Lean好像确实更快一点，speedtest测速的时候发现Lean比immortalwrt更快拉满.
