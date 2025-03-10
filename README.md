@@ -1,7 +1,7 @@
 
 # Actions-Lean
 
-LEAN'S LEDE固件主线编译，6.6内核(开启VOLUNTARY抢占模式)，自带OpenClash, O3优化。**可吃鹅**
+LEAN'S LEDE固件主线编译，6.12内核(开启RealTime抢占模式)，自带OpenClash, O3优化。**可吃鹅**
 
 
 > 最近不吃鹅了，换了更强劲的设备，没有性能焦虑了又用回小猫咪了。
