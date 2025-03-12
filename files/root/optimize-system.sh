@@ -1,25 +1,7 @@
 
-    # 优化系统配置
+echo " 开始准备 优化系统网络配置 "
 
-    if grep -q "1000000" "/etc/profile"; then
-        echo
-        green " 系统网络配置 已经优化过, 不需要再次优化 "
-        echo
-        sysctl -p
-        echo
-        exit
-    fi
-
-    if [ -z $1 ]; then
-        removeOptimizingSystemConfig
-    fi
-
-
-
-    echo
-    green " 开始准备 优化系统网络配置 "
-
-    cat >> /etc/sysctl.conf <<-EOF
+cat >> /etc/sysctl.conf <<-EOF
 
 fs.file-max = 1000000
 fs.inotify.max_user_instances = 8192
@@ -41,25 +23,19 @@ net.ipv4.tcp_max_orphans = 32768
 
 # forward ipv4
 #net.ipv4.ip_forward = 1
-
-
 EOF
 
 
 
-    cat >> /etc/security/limits.conf <<-EOF
+cat >> /etc/security/limits.conf <<-EOF
 *               soft    nofile          1000000
 *               hard    nofile          1000000
 EOF
 
 
-	echo "ulimit -SHn 1000000" >> /etc/profile
-    source /etc/profile
+echo "ulimit -SHn 1000000" >> /etc/profile
+source /etc/profile
 
+sysctl -p
 
-    echo
-	sysctl -p
-
-    echo
-    green " 已完成 系统网络配置的优化 "
-    echo
+echo " 已完成 系统网络配置的优化 "
