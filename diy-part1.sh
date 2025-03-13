@@ -18,7 +18,7 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 使用 O2 级别的优化
-sed -i 's/Os/O2 -ftree-vectorize -fno-strict-aliasing -flto/g' include/target.mk
+sed -i 's/Os/O2 -ftree-vectorize -fno-strict-aliasing/g' include/target.mk
 
 # 关闭不可抢占
 # sed -i 's/CONFIG_PREEMPT_NONE=y/# CONFIG_PREEMPT_NONE is not set/g' target/linux/generic/config-6.12
