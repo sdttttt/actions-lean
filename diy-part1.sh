@@ -25,8 +25,10 @@ sed -i 's/Os/O2 -ftree-vectorize -fno-strict-aliasing/g' include/target.mk
 # sed -i 's/# CONFIG_PREEMPT_RT is not set/CONFIG_PREEMPT_RT=y/g' target/linux/generic/config-6.12
 # sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
 
+# 修改主机名ImmortalWrt -> OpenWrt
+sed -i "s,hostname='LEDE',hostname='OpenWrt',g" package/base-files/files/bin/config_generate
 
-# 交换 LAN/WAN 口
+# 交换 R2S LAN/WAN 口
 sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
