@@ -27,7 +27,7 @@ sed -i 's/Os/O2 -ftree-vectorize -fno-strict-aliasing/g' include/target.mk
 
 # 修改主机名ImmortalWrt -> OpenWrt
 sed -i "s,hostname='LEDE',hostname='OpenWrt',g" package/base-files/files/bin/config_generate
-
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 # 交换 R2S LAN/WAN 口
 sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
