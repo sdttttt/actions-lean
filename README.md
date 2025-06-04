@@ -1,5 +1,4 @@
-
-# Actions-Lean
+# 2025.4.2 啊哈又崩了，永生永世再也不用Lean
 
 LEAN'S LEDE固件主线编译，6.12内核(开启RealTime抢占模式)，自带OpenClash, O3优化。**可吃鹅**
 
